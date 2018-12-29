@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const bodyParser = require('body-Parser');
+const bodyParser = require('body-parser');
 const http = require('http').Server(app);
 const mongoose = require('mongoose');
 const config = require('./config/secret');
@@ -37,8 +37,8 @@ app.get('/users', (req, res) => {
 });
 
 app.get('/users/:id', (req, res) => {
-	var ID = req.params.id;
-	User.findUserByID({_id: ID}, (err, user) =>{
+	const Id = req.params.id;
+	User.findUserById({_id: Id}, (err, user) =>{
 		if (err){
 			console.log(`can't get user: ${err}`);
 			res.json({'err': err});
@@ -47,6 +47,29 @@ app.get('/users/:id', (req, res) => {
 	});
 });
 
+app.put('/users/:id', (req, res) => {
+	const Id = req.params.id;
+	const updatesPayload = req.body;
+	const payload = {Id, updatesPayload};
+	User.updateUserById(payload, (err, user) =>{
+		if (err){
+			console.log(`can't update user: ${err}`);
+			res.json({'err': err});
+		}
+		else res.json(user);
+	});
+});
+
+app.delete('/users/:id', (req, res) => {
+	const Id = req.params.id;
+	User.deleteUserById(Id, (err, user) =>{
+		if (err){
+			console.log(`can't delete user: ${err}`);
+			res.json({'err': err});
+		}
+		else res.json(user);
+	});
+});
 
 http.listen(1337, (err) => {
   if (err) console.log(err);

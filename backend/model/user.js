@@ -15,7 +15,8 @@ const userSchema = mongoose.Schema({
 	},
 	role: {
 		type: String,
-		required: true
+		required: true,
+		enum: ['Client', 'Vendor', 'Admin']
 	}
 });
 
@@ -29,6 +30,15 @@ module.exports.findUsers = (users, callBack) => {
 	User.find(users, callBack);
 }
 
-module.exports.findUserByID = (user, callBack) => {
+module.exports.findUserById = (user, callBack) => {
 	User.find(user, callBack);
+}
+
+module.exports.updateUserById = (payload, callback) => {
+	const {Id, updatesPayload} = payload;
+	User.findOneAndUpdate(Id, updatesPayload, callback);
+}
+
+module.exports.deleteUserById = (Id, callback) => {
+	User.findOneAndDelete(Id, callback);
 }
