@@ -1,0 +1,23 @@
+{
+  "name": "bears-gamestore-backend",
+  "version": "0.0.0",
+  "description": "Bears Game Store Back End",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Bears",
+    "Game",
+    "Store",
+    "BackEnd"
+  ],
+  "author": "ElGendy - Ojas - Meg2tron - Rou",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mongoose": "^5.3.13",
+    "nodemon": "^1.18.9"
+  }
+}
