@@ -1,0 +1,241 @@
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+a:hover{
+	text-decoration: underline;
+}
+
+body{
+	background-image: linear-gradient(to bottom, rgba(34,34,34,0) 400px, rgba(34,34,34,0.7) 600px,
+							rgba(34,34,34,1) 850px), url("../images/gameBackground.jpg");
+	background-size: 100%;
+	background-color: #222222;
+	background-repeat: no-repeat;
+	color: #B3B3B3;
+}
+
+.path {
+	display: block;
+	position: relative;
+	overflow: hidden;
+	background-color: #333333;
+	width:80%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 33%;
+	clear: both;
+}
+
+.path a {
+	float: left;
+	display: inline;
+	color: #44D62C;
+  	text-align: left;
+  	padding: 5px 10px;
+}
+
+.Buy1{
+	position: relative;
+	overflow: hidden;
+	top: -100px;
+	float: right;
+	margin-right: 10%;
+	line-height: 40px;
+}
+
+.cart {
+	background-color: #44D62C;
+	color: #222222;
+	display: inline-block;
+	text-align: justify;
+}
+
+.price {
+	background-color: #222222;
+	color: white;
+	display: inline-block;
+	text-align: center;
+}
+
+.content {
+	position: relative;
+	clear: both;
+	top: -80px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+	background-color: #222222;
+}
+
+.GameTitle {
+	position: relative;
+	font-size: 150%;
+	font-weight: normal;
+	left: 20px;
+	top: 20px;
+}
+
+.CoverPhoto {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	top: 20px;
+	left: 20px;
+	float: left;
+	width: 30%;
+}
+
+.CoverPhoto img {
+ 	width: 90%;
+}
+
+.previewSlideshow {
+ 	position: relative;
+ 	top: 20px;
+ 	overflow: hidden;
+ 	margin-left: auto;
+ 	margin-right: auto;
+ 	width: 50%;
+}
+
+#prev {
+ 	position: relative;
+ 	margin-left: 37%;
+ 	margin-right: auto;
+ 	float: center;
+ 	background-color: #444444;
+ 	overflow: hidden;
+ 	line-height: 30px;
+ 	padding-top: 5px;
+ 	padding-bottom: 5px;
+ 	padding-left: 5px;
+ 	padding-right: 5px;
+}
+
+#prev:hover {
+ 	color: #44D62C;
+ 	text-decoration: none;
+}
+
+#next {
+ 	position: relative;
+ 	margin-left: 0%;
+ 	margin-right: auto;
+ 	float: center;
+ 	background-color: #444444;
+ 	overflow: hidden;
+ 	line-height: 30px;
+ 	padding-top: 5px;
+ 	padding-bottom: 5px;
+ 	padding-left: 5px;
+ 	padding-right: 5px;
+}
+
+#next:hover {
+ 	color: #44D62C;
+ 	text-decoration: none;
+}
+
+.info {
+	position: relative;
+	float: left;
+	display: block;
+	border-style: dotted;
+	clear: left;
+	margin-top: 20px;
+	font-size: 70%;
+	width: 30%;
+	text-indent: -10px;
+}
+
+#infoPoints {
+	display: inline-block;
+}
+
+#infoDetails {
+	display: inline-block;
+}
+
+#infoDetails a {
+	color: #44D62C;
+}
+
+.share {
+	position: relative;
+	float: left;
+	border-style: dotted;
+	clear: left;
+	color: #B3B3B3;
+	margin-top: 15px;
+	font-size: 80%;
+	width: 30%;
+	text-indent: 10px;
+}
+
+.share a {
+	position: relative;
+	display: inline-block;
+	text-align: left;
+	font-size: 150%;
+	line-height: 30px;
+}
+
+.RightSide{
+	position: relative;
+	display: block;
+	margin-left: 30%;
+}
+
+.AboutGame {
+	position: relative;
+	display: block;
+	top: 20px;
+	left: 40px;
+	margin-right: 40px;
+}
+
+#aboutDetails {
+	font-size: 80%;
+}
+
+.SystemRequirements {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	top: 50px;
+	left: 40px;
+}
+
+.minimumRequirementsBlock{
+	display: inline-block;
+	float: left;
+}
+
+#minimumRequirements{
+	font-size: 80%;
+}
+
+.recommendedRequirementsBlock{
+	display: inline-block;
+}
+
+#RecomendedRequirements{
+	font-size: 80%;
+}
+
+.copyrights{
+	position: relative;
+	display: block;
+	top: 50px;
+	float: center;
+	font-size: 70%;
+}
+
+.Buy2{
+	position: relative;
+	display: block;
+	top: 50px;
+	float: right;
+}
