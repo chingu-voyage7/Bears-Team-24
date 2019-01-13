@@ -12,7 +12,7 @@
     "Store",
     "BackEnd"
   ],
-  "author": "ElGendy - Ojas - Meg2tron - Rou",
+  "author": "ElGendy - Radwa",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.3",
