@@ -1,4 +1,3 @@
-const mongoose = require('mongoose');
 const Game = require('../models/GameModel');
 
 module.exports = {
@@ -16,15 +15,11 @@ module.exports = {
     },
     
     updateGameById : (payload, callback) => {
-        const {ID, updatesPayload} = payload;
-        Game.findOneAndUpdate(ID, updatesPayload, callback);
+        const {Id, updatesPayload} = payload;
+        Game.findOneAndUpdate({_id: Id}, updatesPayload, callback);
     },
     
     deleteGameById : (Id, callback) => {
-        Game.findOneAndDelete(Id, callback);
-    }
-
-    getByCategory : (category, callBack) => {
-        Game.find(category, callBack);
+        Game.findOneAndDelete({_id: Id}, callback);
     }
 }

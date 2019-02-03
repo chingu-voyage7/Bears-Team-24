@@ -14,10 +14,14 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
 const userRoutes = require('./routes/User');
+const CategoryRoutes = require('./routes/Category');
+const GameRoutes = require('./routes/Game');
 
 app.use(userRoutes);
+app.use(CategoryRoutes);
+app.use(GameRoutes);
 
-http.listen(1337, (err) => {
+http.listen(9000, (err) => {
   if (err) console.log(err);
-  console.log(`Running on port ${1337}`);
+  console.log(`Running on port ${9000}`);
 });

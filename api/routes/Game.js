@@ -40,7 +40,7 @@ router.delete('/games/:id', (req, res)=>{
 	const id = req.params.id;
 	GameController.deleteGameById(id, (err, game) => {
 		if (err)
-			res.json('err':err);
+			res.json({'err':err});
 		else
 			res.json(game);
 	});
@@ -52,19 +52,10 @@ router.put('games/:id', (req, res)=>{
 	const payload = req.body;
 	GameController.updateGameById({id, body}, (err, game) => {
 		if (err)
-			res.json('err':err);
+			res.json({'err':err});
 		else
 			res.json(game);
 	});
 });
 
-//get games by category
-router.get('/games/:category', (mreq,res) =>{
-	const categ = req.params.category.
-	GameController.getByCategory(categ, (err, game) =>{
-		if (err)
-			res.json('err':err);
-		else
-			res.json(game);
-	})
-});
+module.exports = router;

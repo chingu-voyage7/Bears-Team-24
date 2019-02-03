@@ -1,25 +1,30 @@
 
-const mongoose = require('mongoose');
+const mongoose = require('mongoose'),
+	MongooseSchema = mongoose.Schema;
 
 const gameSchema = mongoose.Schema({
 	name: {
 		unique: true,
-		type: string,
+		type: String,
 		required: true
 	},
 	description: {
-		type: string,
+		type: String,
 		required: true
 	},
 	images: {
 		type: Map,
-		of: String
-		required: true;
-	},
-	categories: {
-		type: [String],
+		of: String,
 		required: true
-	}
+	},
+	categories: [
+		{
+			type: MongooseSchema.Types.ObjectId,
+			ref: 'CategoryModel',
+			required: true
+		}
+	]
 });
 
-module.exports = mongoose.Model('Game', gameSchema);
+const Game = mongoose.model('Game', gameSchema);
+module.exports = Game;
