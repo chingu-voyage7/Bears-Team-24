@@ -1,4 +1,4 @@
-const Game = require('../models/CategoryModel');
+const Category = require('../models/CategoryModel');
 
 module.exports = {
 
@@ -18,7 +18,7 @@ module.exports = {
     
     updateCategoryById : (payload, callback) => {
         const {Id, updatesPayload} = payload;
-        GamCategorye.findOneAndUpdate({_id: Id}, updatesPayload, callback);
+        Category.findOneAndUpdate({_id: Id}, updatesPayload, callback);
     },
     
     deleteCategoryById : (Id, callback) => {
